@@ -62,6 +62,19 @@ public extension UIColor {
     }
 }
 
+// MARK: - Hex Color For Optional
+public extension Optional where Wrapped: UIColor {
+    
+    /// 返回16进制色值对应的颜色
+    /// - Parameters:
+    ///   - hex: 16进制颜色值
+    ///   - alpha: 不透明度
+    /// - Returns: 返回对应16进制色值的颜色
+    static func hex(_ hex: UInt, alpha: CGFloat = 1) -> UIColor? {
+        return UIColor(hex: hex, alpha: alpha)
+    }
+}
+
 // MARK: - Gradient Color
 public extension Array where Element: UIColor {
     

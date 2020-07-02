@@ -19,9 +19,11 @@ class UIColorExtensionController: UIViewController {
         super.viewDidLoad()
 
         // 16进制颜色表示
-        hexColorLabel.textColor = UIColor(hex: 0xFF00FF)
-        
-        
+//        hexColorLabel.textColor = UIColor(hex: 0xFF00FF)
+        hexColorLabel.textColor = .hex(0xFF00FF)
+        let myColor: UIColor? = .hex(0xFF00FF)
+        print(myColor!)
+                
         // 渐变颜色
         let colorArr = [UIColor(hex: 0xFFFFFF)!, UIColor(hex: 0xFF00FF, alpha: 0.8)!]
         

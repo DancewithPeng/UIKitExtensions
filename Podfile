@@ -4,7 +4,7 @@ use_frameworks!                     # 使用framework代替静态库
 
 pod 'DPLog', '~> 2.0.0'
 pod 'DPKeychain', '~> 1.0.0'
-pod 'DPFoundationExtensions', '~> 1.0.0'
+pod 'DPFoundationExtensions', '~> 1.0.1'
 
 target 'UIKitExtensions' do                # target对应Xcode中的target	
 

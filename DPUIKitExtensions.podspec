@@ -133,6 +133,6 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'DPLog', '~> 2.0.0'
   spec.dependency 'DPKeychain', '~> 1.0.0'
-  spec.dependency 'DPFoundationExtensions', '~> 1.0.0'
+  spec.dependency 'DPFoundationExtensions', '~> 1.0.1'
 
 end

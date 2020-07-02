@@ -1,0 +1,38 @@
+{
+  "name": "UIKitExtensions",
+  "version": "1.0.9",
+  "summary": "UIKit的相关扩展",
+  "description": "UIKit的相关扩展，为了方便使用UIKit的API",
+  "homepage": "http://192.168.1.60:81/iOS/Bases/UIKitExtensions.git",
+  "license": {
+    "type": "Copyright",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "张鹏": "zhangpeng@kefeizhu.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_version": "5.0",
+  "source": {
+    "git": "http://192.168.1.60:81/iOS/Bases/UIKitExtensions.git",
+    "tag": "1.0.9"
+  },
+  "source_files": [
+    "UIKitExtensions/Sources",
+    "UIKitExtensions/Sources/**/*.{swift}"
+  ],
+  "resources": "UIKitExtensions/Resources/*.*",
+  "dependencies": {
+    "SnapKit": [
+      "~> 4.2.0"
+    ],
+    "KFZLog": [
+      "~> 1.2.0"
+    ],
+    "Keychain": [
+      "~> 1.0.0"
+    ]
+  }
+}

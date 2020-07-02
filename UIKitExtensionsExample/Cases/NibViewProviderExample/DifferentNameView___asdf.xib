@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i9K-VL-vN6" customClass="DifferentNameView" customModule="UIKitExtensionsExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不同名字的View 😂😂😂" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-PR-79k">
+                    <rect key="frame" x="15" y="442.5" width="384" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.62813149560000003" blue="0.50836766470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="vLM-w0-Atn" firstAttribute="trailing" secondItem="hgt-PR-79k" secondAttribute="trailing" constant="15" id="DlV-eY-ePH"/>
+                <constraint firstItem="hgt-PR-79k" firstAttribute="centerX" secondItem="vLM-w0-Atn" secondAttribute="centerX" id="R6l-Jt-1XK"/>
+                <constraint firstItem="hgt-PR-79k" firstAttribute="centerY" secondItem="vLM-w0-Atn" secondAttribute="centerY" id="med-o5-qHa"/>
+                <constraint firstItem="hgt-PR-79k" firstAttribute="leading" secondItem="vLM-w0-Atn" secondAttribute="leading" constant="15" id="njT-w5-g3K"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vLM-w0-Atn"/>
+            <connections>
+                <outlet property="textLabel" destination="hgt-PR-79k" id="KdP-Vn-pkf"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="-206"/>
+        </view>
+    </objects>
+</document>

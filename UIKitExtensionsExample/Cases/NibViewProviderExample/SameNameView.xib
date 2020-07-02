@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fFc-EK-yU6" customClass="SameNameView" customModule="UIKitExtensionsExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相同名字的View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-Or-z8i">
+                    <rect key="frame" x="15" y="443" width="384" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zAn-Or-z8i" firstAttribute="centerX" secondItem="FLS-Nk-Yen" secondAttribute="centerX" id="Ai8-aP-NIe"/>
+                <constraint firstItem="FLS-Nk-Yen" firstAttribute="trailing" secondItem="zAn-Or-z8i" secondAttribute="trailing" constant="15" id="MdS-rj-ejV"/>
+                <constraint firstItem="zAn-Or-z8i" firstAttribute="leading" secondItem="FLS-Nk-Yen" secondAttribute="leading" constant="15" id="Wbs-4a-sS4"/>
+                <constraint firstItem="zAn-Or-z8i" firstAttribute="centerY" secondItem="FLS-Nk-Yen" secondAttribute="centerY" id="yMp-5z-o9h"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="FLS-Nk-Yen"/>
+            <connections>
+                <outlet property="textlabel" destination="zAn-Or-z8i" id="loW-nt-2Lr"/>
+            </connections>
+            <point key="canvasLocation" x="-90" y="-238"/>
+        </view>
+    </objects>
+</document>

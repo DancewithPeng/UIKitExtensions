@@ -1,0 +1,6 @@
+framework module DPKeychain {
+  umbrella header "DPKeychain-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,10 @@
+disabled_rules: # 禁用默认的规则
+  - line_length           # 行120个字符
+  - trailing_whitespace   # 尾部空格
+  - trailing_newline      # 尾部换行符
+  - vertical_whitespace   # 垂直空格
+  - multiple_closures_with_trailing_closure # 函数有多个闭包时，不应该使用`尾部闭包的形式`的形式进行调用
+
+excluded: # 不进行检查的目录
+  - Pods
+  - UIKitExtensionsExample

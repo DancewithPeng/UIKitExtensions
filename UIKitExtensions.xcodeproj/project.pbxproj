@@ -26,6 +26,8 @@
 		6E59B97422A8BFB200415BAA /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59B97322A8BFB200415BAA /* UILabelExtension.swift */; };
 		6E59B97622A8C0EA00415BAA /* StringLayoutSizeExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59B97522A8C0EA00415BAA /* StringLayoutSizeExtensionViewController.swift */; };
 		6E5B8B5024ADA95A00487C34 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B8B4F24ADA95A00487C34 /* UIKitExtensions.swift */; };
+		6E5B8B5324ADC48D00487C34 /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B8B5224ADC48D00487C34 /* NSMutableAttributedStringExtension.swift */; };
+		6E5B8B5524ADC4BE00487C34 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B8B5424ADC4BE00487C34 /* NSAttributedStringExtension.swift */; };
 		6E652E4722927B0200D7F458 /* KFZViewControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E652E4622927B0200D7F458 /* KFZViewControllerExample.swift */; };
 		6E6C72B72302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C72B62302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift */; };
 		6E6C72BA2302E41600B15E18 /* SameNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C72B82302E41600B15E18 /* SameNameViewController.swift */; };
@@ -52,6 +54,7 @@
 		6EC0A0482272A306003DC6B6 /* UIDeviceExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC0A0472272A306003DC6B6 /* UIDeviceExtensionViewController.swift */; };
 		6EC0A04B2272B323003DC6B6 /* DeviceModelNameMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC0A04A2272B323003DC6B6 /* DeviceModelNameMaps.plist */; };
 		6EC0A04D2272F729003DC6B6 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC0A04C2272F729003DC6B6 /* UIScreenExtension.swift */; };
+		6ECF901D24ADD2800066EA08 /* NSAttributedStringExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF901C24ADD2800066EA08 /* NSAttributedStringExtensionController.swift */; };
 		6EDF865022E078BC00927FCF /* UITextViewLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF864F22E078BC00927FCF /* UITextViewLimiter.swift */; };
 		6EDF865222E08A5100927FCF /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF865122E08A5100927FCF /* UITextViewExtension.swift */; };
 		6EDF865422E090A500927FCF /* UITextViewExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF865322E090A500927FCF /* UITextViewExtensionViewController.swift */; };
@@ -113,6 +116,8 @@
 		6E59B97322A8BFB200415BAA /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		6E59B97522A8C0EA00415BAA /* StringLayoutSizeExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLayoutSizeExtensionViewController.swift; sourceTree = "<group>"; };
 		6E5B8B4F24ADA95A00487C34 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		6E5B8B5224ADC48D00487C34 /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
+		6E5B8B5424ADC4BE00487C34 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		6E652E4622927B0200D7F458 /* KFZViewControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFZViewControllerExample.swift; sourceTree = "<group>"; };
 		6E6C72B62302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewControllerProviderExampleViewController.swift; sourceTree = "<group>"; };
 		6E6C72B82302E41600B15E18 /* SameNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameNameViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 		6EC0A0472272A306003DC6B6 /* UIDeviceExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensionViewController.swift; sourceTree = "<group>"; };
 		6EC0A04A2272B323003DC6B6 /* DeviceModelNameMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DeviceModelNameMaps.plist; sourceTree = "<group>"; };
 		6EC0A04C2272F729003DC6B6 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
+		6ECF901C24ADD2800066EA08 /* NSAttributedStringExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensionController.swift; sourceTree = "<group>"; };
 		6EDF864F22E078BC00927FCF /* UITextViewLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewLimiter.swift; sourceTree = "<group>"; };
 		6EDF865122E08A5100927FCF /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		6EDF865322E090A500927FCF /* UITextViewExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtensionViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 				6E59B97322A8BFB200415BAA /* UILabelExtension.swift */,
 				6E7333CB22AF897500034910 /* UISearchBarExtension.swift */,
 				6E3B7A6822B09B1700B5DE4F /* UINavigationBarExtension.swift */,
+				6E5B8B5124ADC48D00487C34 /* NSAttributedStringExtension */,
 				6EDF864E22E0789400927FCF /* UITextViewExtension */,
 				6EDF864D22E0787A00927FCF /* UITextFieldExtension */,
 				6E0BF1F922B0953B00B71D49 /* UIViewExtension */,
@@ -255,6 +262,15 @@
 				6E0BF1FC22B095B500B71D49 /* PlaceholderLayoutGuide.swift */,
 			);
 			path = UIViewExtension;
+			sourceTree = "<group>";
+		};
+		6E5B8B5124ADC48D00487C34 /* NSAttributedStringExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B8B5424ADC4BE00487C34 /* NSAttributedStringExtension.swift */,
+				6E5B8B5224ADC48D00487C34 /* NSMutableAttributedStringExtension.swift */,
+			);
+			path = NSAttributedStringExtension;
 			sourceTree = "<group>";
 		};
 		6E6C72B52302E32600B15E18 /* NibViewControllerProviderExample */ = {
@@ -328,6 +344,7 @@
 				6E6C72B52302E32600B15E18 /* NibViewControllerProviderExample */,
 				6E9816BB22FBF74400CBF61A /* NibViewProviderExample */,
 				6E8BAEA5232F5BD800BE18CA /* PickingResultExampleViewController.swift */,
+				6ECF901C24ADD2800066EA08 /* NSAttributedStringExtensionController.swift */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -544,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EDF865222E08A5100927FCF /* UITextViewExtension.swift in Sources */,
+				6E5B8B5524ADC4BE00487C34 /* NSAttributedStringExtension.swift in Sources */,
 				6E0BF1FB22B0954F00B71D49 /* CompatibleSafeAreaLayoutGuide.swift in Sources */,
 				6EE5CFD1226F3C4300CE643F /* UITextFieldLimiter.swift in Sources */,
 				6E59B97422A8BFB200415BAA /* UILabelExtension.swift in Sources */,
@@ -551,6 +569,7 @@
 				6E5B8B5024ADA95A00487C34 /* UIKitExtensions.swift in Sources */,
 				6EE5CFCB226F2A9300CE643F /* UITextFieldExtension.swift in Sources */,
 				6EE5CFC9226F286500CE643F /* UICollectionViewExtension.swift in Sources */,
+				6E5B8B5324ADC48D00487C34 /* NSMutableAttributedStringExtension.swift in Sources */,
 				6EE387CE228516AF00379157 /* UIViewExtension.swift in Sources */,
 				6EE5CFCF226F2F8E00CE643F /* UIImageExtension.swift in Sources */,
 				6EE5CFBE226F280200CE643F /* UITableViewExtension.swift in Sources */,
@@ -594,6 +613,7 @@
 				6EA285FB2270064600829FB2 /* UIFontExtensionController.swift in Sources */,
 				6E008CE3226D652600EA70FE /* AppDelegate.swift in Sources */,
 				6E6C72B72302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift in Sources */,
+				6ECF901D24ADD2800066EA08 /* NSAttributedStringExtensionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

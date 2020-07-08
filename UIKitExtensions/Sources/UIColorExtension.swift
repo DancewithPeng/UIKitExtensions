@@ -9,6 +9,7 @@
 import UIKit
 
 // MARK: - Convert to image
+@objc
 public extension UIColor {
     
     /// 生成对应颜色的图片
@@ -30,6 +31,7 @@ public extension UIColor {
 }
 
 // MARK: - Hex Color
+@objc
 public extension UIColor {
     
     /// 根据16进制色值创建颜色对象的便捷方法

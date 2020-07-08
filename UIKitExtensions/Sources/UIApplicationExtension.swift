@@ -9,6 +9,7 @@
 import UIKit
 
 // MARK: - UIApplication Infos
+@objc
 public extension UIApplication {
     
     /// 包ID

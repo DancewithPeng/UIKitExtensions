@@ -15,6 +15,12 @@ target 'UIKitExtensionsExample' do                # target对应Xcode中的targe
 	pod 'SnapKit', '~> 5.0.1'
 end
 
+target 'UIKitExtensionsExample-ObjC' do                # target对应Xcode中的target
+  pod 'Toast-Swift', '~> 5.0.0'
+  pod 'SnapKit', '~> 5.0.1'
+end
+
+
 post_install do |installer|
 	installer.pods_project.targets.each do |target|
 		puts target.name

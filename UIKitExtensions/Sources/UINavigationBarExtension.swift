@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - UINavigationBar的扩展
+@objc
 public extension UINavigationBar {
     
     /// 分割线

@@ -11,6 +11,7 @@ import DPLog
 import DPKeychain
 
 // MARK: - Device Model
+@objc
 public extension UIDevice {
     
     /// 机型名字
@@ -87,6 +88,7 @@ public extension UIDevice {
 }
 
 // MARK: - Device UUID
+@objc
 extension UIDevice {
     
     /// 持续化存储的UUID，可用作设备唯一ID

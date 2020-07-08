@@ -9,6 +9,7 @@
 import UIKit
 
 /// UITextView输入限制器
+@objc
 open class UITextViewLimiter: NSObject {
     
     /// 对应的输入框

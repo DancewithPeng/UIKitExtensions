@@ -9,6 +9,7 @@
 import UIKit
 
 /// 扩展的ViewController基类，封装了常用的方法
+@objc
 open class ExtendedViewController: UIViewController {
 
     /// 控制是否隐藏导航栏

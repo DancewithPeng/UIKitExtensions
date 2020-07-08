@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - 返回各种字重的UIFont便捷方法
+@objc
 public extension UIFont {
     
     /// 标准体

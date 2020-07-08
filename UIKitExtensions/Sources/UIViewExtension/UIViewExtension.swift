@@ -10,6 +10,7 @@ import Foundation
 import DPFoundationExtensions
 
 // MARK: - Safe Area
+@objc
 public extension UIView {
     
     /// 安全区域指南
@@ -63,6 +64,7 @@ public extension UIView {
 
 
 // MARK: - Owner View Controller
+@objc
 public extension UIView {
     
     /// 持有View的UIViewController，如果 UIViewController.view != self 则会返回nil
@@ -76,6 +78,7 @@ public extension UIView {
 
 
 // MARK: - Recursive Traversal Subviews
+@objc
 public extension UIView {
     
     /// 递归遍历子View
@@ -93,6 +96,7 @@ public extension UIView {
 
 
 // MARK: - UIView isVisible
+@objc
 public extension UIView {
     
     var isVisible: Bool {

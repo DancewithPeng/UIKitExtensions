@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - 搜索栏相关扩展
+@objc
 public extension UISearchBar {
     
     /// 搜索输入框

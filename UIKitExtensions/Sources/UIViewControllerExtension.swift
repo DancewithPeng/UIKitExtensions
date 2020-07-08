@@ -54,6 +54,7 @@ public extension UIViewController {
 
 
 // MARK: - Visible View Controller
+@objc
 public extension UIViewController {
     
     /// 当前可见的的视图控制器
@@ -101,6 +102,7 @@ public extension UIViewController {
 
 
 // MARK: - UIApplication Visible ViewController
+@objc
 public extension UIApplication {
     
     static var visibleViewController: UIViewController? {

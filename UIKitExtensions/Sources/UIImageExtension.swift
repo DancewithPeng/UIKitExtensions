@@ -10,6 +10,7 @@ import Foundation
 import Accelerate
 
 // MARK: - Image Resize
+@objc
 public extension UIImage {
     
     /// 调整图片分辨率

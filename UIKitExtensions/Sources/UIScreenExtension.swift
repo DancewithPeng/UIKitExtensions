@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - UIScreen相关扩展
+@objc
 public extension UIScreen {
     
     /// 是否有缺口(刘海屏)

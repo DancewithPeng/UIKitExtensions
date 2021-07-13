@@ -63,25 +63,42 @@ open class ExtendedViewController: UIViewController {
         // 隐藏显示导航栏
         if hidesNavigationBar {
             navigationController?.setNavigationBarHidden(true, animated: animated)
-        } else {
-            navigationController?.setNavigationBarHidden(false, animated: animated)
+            return
         }
-        
+                        
         // 让导航栏透明
         if transparentNavigationBar {
             let transparentImage = UIImage()
             navigationController?.navigationBar.setBackgroundImage(transparentImage, for: .default)
             navigationController?.navigationBar.shadowImage = transparentImage
-        } else {
-            navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
             
-            if hidesNavigationBarSeparator {
-                navigationController?.navigationBar.separatorView?.isHidden = true
-            } else {
-                navigationController?.navigationBar.separatorView?.isHidden = false
-                navigationController?.navigationBar.shadowImage = navigationBarSeparatorImage
-            }
+            // 显示导航栏
+            navigationController?.setNavigationBarHidden(false, animated: animated)
+            return
         }
+        
+        // 导航栏不透明
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        
+        // 隐藏导航栏分割线
+        if hidesNavigationBarSeparator {
+            navigationController?.navigationBar.separatorView?.isHidden = true
+            navigationController?.navigationBar.shadowImage = UIImage()
+            
+            // 显示导航栏
+            navigationController?.setNavigationBarHidden(false, animated: animated)
+            
+            return
+        }
+        
+        // 显示导航栏分割线
+        navigationController?.navigationBar.separatorView?.isHidden = false
+        
+        // 自定义导航栏分割线
+        navigationController?.navigationBar.shadowImage = navigationBarSeparatorImage
+        
+        // 显示导航栏
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     deinit {

@@ -10,12 +10,13 @@ import UIKit
 import UIKitExtensions
 import SnapKit
 
-class ExtendedViewControllerExample: UIViewController {
+class ExtendedViewControllerExample: ExtendedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.hidesNavigationBar = false
+        self.hidesNavigationBarSeparator = false
     }
     
     @IBAction func pushedButtonDidClick(_ sender: Any) {
@@ -31,26 +32,39 @@ class MyExtendedViewController: ExtendedViewController  {
         super.viewDidLoad()
         
         
-        view.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
+//        view.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
+        view.backgroundColor = .white
         
-        switch navigationController!.viewControllers.count {
-        case 2:
-            hidesNavigationBar = true
-        case 3:
-            hidesNavigationBar = false
-            transparentNavigationBar = true
-        case 4:
-            hidesNavigationBar = false
-            transparentNavigationBar = false
-            hidesNavigationBarSeparator = true
-        case 5:
+//        self.transparentNavigationBar = Bool.random()
+        self.hidesNavigationBar = Bool.random()
+        self.transparentNavigationBar = Bool.random()
+        self.hidesNavigationBarSeparator = Bool.random()
+        
+        print("hidesNavigationBar: \(hidesNavigationBar), transparentNavigationBar: \(transparentNavigationBar), hidesNavigationBarSeparator: \(hidesNavigationBarSeparator)")
+        
+//        switch navigationController!.viewControllers.count {
+//        case 2:
+//            break
+//        case 3: // 隐藏导航栏
+//            hidesNavigationBar = true
+//        case 4: // 透明导航栏
+//            hidesNavigationBar = false
+//            transparentNavigationBar = true
+//        case 5: // 显示导航栏，但是隐藏分割线
 //            hidesNavigationBar = false
 //            transparentNavigationBar = false
+//            hidesNavigationBarSeparator = true
+//        case 6: // 显示导航栏，显示自定义分割线
+//            hidesNavigationBar = false
 //            hidesNavigationBarSeparator = false
-            navigationBarSeparatorImage = currentBundle.image(named: "线")
-        default:
-            break
-        }
+////            navigationBarSeparatorImage = currentBundle.image(named: "线")
+//            view.backgroundColor = .white
+//        default:
+//            hidesNavigationBar = false
+//            hidesNavigationBarSeparator = false
+//            view.backgroundColor = .white
+//            break
+//        }
         
         let pushedBtn = UIButton(type: .system)
         pushedBtn.setTitle("下一页", for: .normal)

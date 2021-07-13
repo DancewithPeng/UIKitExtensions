@@ -21,11 +21,14 @@ public extension UINavigationBar {
         }
         
         // backgroundView上第一个view就是分割线
-        guard let separator = backgroundView.subviews.first, separator.bounds.height <= 0.5 else {
-            return nil
+        for subview in backgroundView.subviews {
+            guard subview.bounds.height <= 0.5 else {
+                continue
+            }
+            return subview
         }
         
-        return separator
+        return nil
     }
     
     /// 内容的View

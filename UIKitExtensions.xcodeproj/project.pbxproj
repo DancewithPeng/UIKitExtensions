@@ -173,7 +173,7 @@
 		6E9816BC22FBF77100CBF61A /* SameNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameNameView.swift; sourceTree = "<group>"; };
 		6E9816BE22FBF77B00CBF61A /* SameNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SameNameView.xib; sourceTree = "<group>"; };
 		6E9816C022FBF90200CBF61A /* DifferentNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentNameView.swift; sourceTree = "<group>"; };
-		6E9816C222FBF92000CBF61A /* DifferentNameView___asdf.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DifferentNameView___asdf.xib; sourceTree = "<group>"; };
+		6E9816C222FBF92000CBF61A /* DifferentNameView___asdf.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "DifferentNameView___asdf.xib"; sourceTree = "<group>"; };
 		6E9816C422FBFA8800CBF61A /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		6EA285E9226FEF6900829FB2 /* UIViewControllerExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionController.swift; sourceTree = "<group>"; };
 		6EA285EB226FF62800829FB2 /* UITableViewExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionController.swift; sourceTree = "<group>"; };
@@ -1064,7 +1064,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.woshipm.UIKitExtensionsExample-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "DP.iOS.Component.UIKitExtensionsExample-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1083,7 +1083,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.woshipm.UIKitExtensionsExample-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "DP.iOS.Component.UIKitExtensionsExample-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

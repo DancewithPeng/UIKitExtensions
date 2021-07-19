@@ -13,6 +13,7 @@ import UIKit
 public extension UIColor {
     
     /// 生成对应颜色的图片
+    @objc
     func image(with size: CGSize = CGSize(width: 1.0, height: 1.0)) -> UIImage {
         
         let rect = CGRect(origin: .zero, size: size)
@@ -40,6 +41,7 @@ public extension UIColor {
     ///   - hex: 16进制颜色值
     ///   - alpha: 不透明度
     /// - Returns: 返回对应16进制色值的颜色
+    @objc
     convenience init?(hex: UInt, alpha: CGFloat = 1) {
         
         guard 0x000000...0xFFFFFF ~= hex else {
@@ -59,6 +61,7 @@ public extension UIColor {
     ///   - hex: 16进制颜色值
     ///   - alpha: 不透明度
     /// - Returns: 返回对应16进制色值的颜色
+    @objc(colorWithHex:alpha:)
     static func hex(_ hex: UInt, alpha: CGFloat = 1) -> UIColor? {
         return UIColor(hex: hex, alpha: alpha)
     }

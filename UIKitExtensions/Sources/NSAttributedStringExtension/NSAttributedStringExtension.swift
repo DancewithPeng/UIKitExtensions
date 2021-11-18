@@ -31,7 +31,7 @@ public extension NSAttributedString {
         
         if let textMinimumLineHeight = minimumLineHeight {
             let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.minimumLineHeight = textMinimumLineHeight
+            paragraphStyle.lineSpacing = textMinimumLineHeight - (font?.lineHeight ?? 0)
             
             attributes[NSAttributedString.Key.paragraphStyle] = paragraphStyle
         }

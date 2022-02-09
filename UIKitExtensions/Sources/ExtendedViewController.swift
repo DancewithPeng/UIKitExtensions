@@ -82,7 +82,13 @@ open class ExtendedViewController: UIViewController {
         
         // 隐藏导航栏分割线
         if hidesNavigationBarSeparator {
-            navigationController?.navigationBar.separatorView?.isHidden = true
+            if navigationController?.navigationBar.separatorView != nil {
+                navigationController?.navigationBar.separatorView?.isHidden = true
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+                    self?.navigationController?.navigationBar.separatorView?.isHidden = true
+                }
+            }
             navigationController?.navigationBar.shadowImage = UIImage()
             
             // 显示导航栏

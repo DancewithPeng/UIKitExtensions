@@ -15,6 +15,7 @@ import DPKeychain
 public extension UIDevice {
     
     /// 机型名字
+    @available(*, deprecated, message: "弃用API，此方式实现不优雅")
     var modelName: String {
         
         // 已经存在，直接返回对应的机型名称

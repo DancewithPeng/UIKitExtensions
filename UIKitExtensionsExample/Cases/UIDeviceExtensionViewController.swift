@@ -8,6 +8,7 @@
 
 import UIKit
 import UIKitExtensions
+import DPLog
 
 class UIDeviceExtensionViewController: UIViewController {
 
@@ -18,10 +19,9 @@ class UIDeviceExtensionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UIDevice.current.modelIdentifier)
-        print(UIDevice.current.modelName)        
+        Log.info(UIDevice.current.modelIdentifier)
         
-        modelNameLabel.text = "Model Identifier is: \(UIDevice.current.modelIdentifier) & Name is \(UIDevice.current.modelName)"
+        modelNameLabel.text = "Model Identifier is: \(UIDevice.current.modelIdentifier)"
         notchScreenLabel.text = "Notch Screen: \(UIScreen.main.hasNotch ? "true" : "false")"
         uuidLabel.text = "UUID: \(UIDevice.current.persistentUUID)"
         

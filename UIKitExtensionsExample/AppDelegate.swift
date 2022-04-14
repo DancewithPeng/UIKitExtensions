@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DPLog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        do {
+            try DPLog.Collector.shared.register(
+                    DPLog.ConsoleHandler(
+                        id: "UIKitExtensionsExample.ConsoleHandler",
+                        level: .verbose,
+                        formatter: DPLog.PlainMessageFormatter()
+                    )
+                )
+        } catch {
+            print(error)
+        }
+        
         return true
     }
 

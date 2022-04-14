@@ -1,14 +1,14 @@
 PODS:
   - DPFoundationExtensions (1.0.1)
   - DPKeychain (1.0)
-  - DPLog (2.0)
+  - DPLog (3.0)
   - SnapKit (5.0.1)
   - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
   - DPFoundationExtensions (~> 1.0.1)
   - DPKeychain (~> 1.0.0)
-  - DPLog (~> 2.0.0)
+  - DPLog (~> 3.0.0)
   - SnapKit (~> 5.0.1)
   - Toast-Swift (~> 5.0.0)
 
@@ -23,10 +23,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   DPFoundationExtensions: b5d912c72d8fa02026088babdcf21d4b1ef8811a
   DPKeychain: ee68d744b7b8eaac9af38142b20bfe80c92c5a23
-  DPLog: 820205ee14c28edd9dcebc7e39b94231aa9630fb
+  DPLog: 30d131c4114c4b9812ef16d7f1932ca0f1b25106
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 557703ee00ce209c5dcb764cecd8d5a0c587b24b
+PODFILE CHECKSUM: 9506a3bb0f429ed4ac5eac2537c0cec109105da9
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

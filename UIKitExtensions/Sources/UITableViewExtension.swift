@@ -24,9 +24,17 @@ public extension UITableView {
     ///
     /// - Parameter cellType: Cell的类型
     @objc
+    func registerNibCell(_ cellType: UITableViewCell.Type, in bundle: Bundle?) {
+        let typeIdentifier = String(reflecting: cellType)
+        register(UINib.make(for: cellType, bundle: bundle), forCellReuseIdentifier: typeIdentifier)
+    }
+    
+    /// 注册Nib Cell
+    ///
+    /// - Parameter cellType: Cell的类型
+    @objc
     func registerNibCell(_ cellType: UITableViewCell.Type) {
-        let typeIdentifier = "\(cellType)"
-        register(UINib(nibName: typeIdentifier, bundle: Bundle(for: cellType)), forCellReuseIdentifier: typeIdentifier)
+        registerNibCell(cellType, in: nil)
     }
     
     /// 复用Cell
@@ -52,9 +60,17 @@ public extension UITableView {
     ///
     /// - Parameter sectionHeaderFooterType: section头部或尾部的类型
     @objc
+    func registerNibSectionHeaderFooter(_ sectionHeaderFooterType: UITableViewHeaderFooterView.Type, in bundle: Bundle?) {
+        let typeIdentifier = String(reflecting: sectionHeaderFooterType)
+        register(UINib.make(for: sectionHeaderFooterType, bundle: bundle), forHeaderFooterViewReuseIdentifier: typeIdentifier)
+    }
+    
+    /// 注册Section头部或尾部
+    ///
+    /// - Parameter sectionHeaderFooterType: section头部或尾部的类型
+    @objc
     func registerNibSectionHeaderFooter(_ sectionHeaderFooterType: UITableViewHeaderFooterView.Type) {
-        let typeIdentifier = "\(sectionHeaderFooterType)"
-        register(UINib(nibName: typeIdentifier, bundle: Bundle(for: sectionHeaderFooterType)), forHeaderFooterViewReuseIdentifier: typeIdentifier)
+        registerNibSectionHeaderFooter(sectionHeaderFooterType, in: nil)
     }
     
     /// 复用Section头部或尾部

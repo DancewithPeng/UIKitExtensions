@@ -54,8 +54,6 @@ public extension UIImage {
         var error = vImageBuffer_InitWithCGImage(&sourceBuffer, &format, nil, cgImage, numericCast(kvImageNoFlags))
         guard error == kvImageNoError else { return nil }
         
-        // create a destination buffer
-//        let scale = self.scale
         let destWidth = Int(destSize.width)
         let destHeight = Int(destSize.height)
         let bytesPerPixel = cgImage.bitsPerPixel / 8

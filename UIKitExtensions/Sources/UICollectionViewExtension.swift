@@ -24,9 +24,17 @@ public extension UICollectionView {
     ///
     /// - Parameter cellType: Cell的类型
     @objc
-    func registerNibCell(_ cellType: UICollectionViewCell.Type) {
+    func registerNibCell(_ cellType: UICollectionViewCell.Type, in bundle: Bundle?) {
         let typeIdentifier = "\(cellType)"
-        register(UINib(nibName: typeIdentifier, bundle: Bundle(for: cellType)), forCellWithReuseIdentifier: typeIdentifier)
+        register(UINib.make(for: cellType, bundle: bundle), forCellWithReuseIdentifier: typeIdentifier)
+    }
+    
+    /// 注册Nib Cell
+    ///
+    /// - Parameter cellType: Cell的类型
+    @objc
+    func registerNibCell(_ cellType: UICollectionViewCell.Type) {
+        registerNibCell(cellType, in: nil)
     }
     
     /// 注册SupplementaryView
@@ -46,9 +54,19 @@ public extension UICollectionView {
     ///   - supplementaryViewType: SupplementaryView的类型
     ///   - kind: SupplementaryView对应的kind
     @objc
-    func registerNibSupplementaryView(_ supplementaryViewType: UICollectionReusableView.Type, forKind kind: String) {
+    func registerNibSupplementaryView(_ supplementaryViewType: UICollectionReusableView.Type, forKind kind: String, in bundle: Bundle?) {
         let typeIdentifier = "\(supplementaryViewType)"
-        register(UINib(nibName: typeIdentifier, bundle: Bundle(for: supplementaryViewType)), forSupplementaryViewOfKind: kind, withReuseIdentifier: typeIdentifier)
+        register(UINib.make(for: supplementaryViewType, bundle: bundle), forSupplementaryViewOfKind: kind, withReuseIdentifier: typeIdentifier)
+    }
+    
+    /// 注册 Nib SupplementaryView
+    ///
+    /// - Parameters:
+    ///   - supplementaryViewType: SupplementaryView的类型
+    ///   - kind: SupplementaryView对应的kind
+    @objc
+    func registerNibSupplementaryView(_ supplementaryViewType: UICollectionReusableView.Type, forKind kind: String) {
+        registerNibSupplementaryView(supplementaryViewType, forKind: kind, in: nil)
     }
     
     /// 复用Cell

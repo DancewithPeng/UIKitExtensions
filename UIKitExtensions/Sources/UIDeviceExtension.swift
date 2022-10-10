@@ -156,19 +156,19 @@ extension UIDevice {
 extension UIDevice {
     
     /// 机型名称关联对象的key
-    private static var modelNameAssociatedObjectKey = "UIDevice.modelNameAssociatedObjectKey"
+    private static var modelNameAssociatedObjectKey       = "UIDevice.modelNameAssociatedObjectKey"
     
     /// 机型标识符关联对象的key
     private static var modelIdentifierAssociatedObjectKey = "UIDevice.modelIdentifierAssociatedObjectKey"
     
     /// UUID关联对象的key
-    private static var persistentUUIDAssociatedObjectKey = "UIDevice.persistentUUIDAssociatedObjectKey"
+    private static var persistentUUIDAssociatedObjectKey  = "UIDevice.persistentUUIDAssociatedObjectKey"
     
     /// 存储UUID对应的key
-    private static let deviceUUIDStorageKey = "UIDevice.deviceUUIDStorageKey"
+    private static let deviceUUIDStorageKey               = "UIDevice.deviceUUIDStorageKey"
     
     /// 钥匙串服务名称
-    private static let keychainServiceName = UIApplication.shared.bundleIdentifier
+    private static let keychainServiceName                = UIApplication.shared.bundleIdentifier
     
     
     /// 机型名称集合

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <UIKitExtensions/UIKitExtensions.h>
 #import <DPLog/DPLog.h>
+#import <DPLog/DPLog-Swift.h>
 
 @interface ViewController ()
 
@@ -19,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidTap:)]];        
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidTap:)]];
+    
+    UITableView *tableView;
 }
 
 - (void)viewDidTap:(id)sender {

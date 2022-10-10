@@ -2,7 +2,7 @@
 //  DifferentNameView.swift
 //  UIKitExtensionsExample
 //
-//  Created by 张鹏 on 2019/8/8.
+//  Created by DancewithPeng on 2019/8/8.
 //  Copyright © 2019 dancewithpeng@gmail.com. All rights reserved.
 //
 

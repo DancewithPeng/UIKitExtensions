@@ -2,7 +2,7 @@
 //  UIDeviceExtension.swift
 //  UIKitExtensions
 //
-//  Created by 张鹏 on 2019/4/26.
+//  Created by DancewithPeng on 2019/4/26.
 //  Copyright © 2019 dancewithpeng@gmail.com. All rights reserved.
 //
 
@@ -177,7 +177,7 @@ extension UIDevice {
     public static var modelNameMaps: [String: String]? {
         
         do {
-            guard let url = Bundle(for: UIKitExtensions.self).url(forResource: "DeviceModelNameMaps", withExtension: "plist") else {
+            guard let url = UIKitExtensions.resourceBundle.url(forResource: "DeviceModelNameMaps", withExtension: "plist") else {
                 throw ModelNameError.urlNotFound
             }
             

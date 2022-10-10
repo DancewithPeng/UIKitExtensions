@@ -2,7 +2,7 @@
 //  UISearchBarExtensionViewController.swift
 //  UIKitExtensionsExample
 //
-//  Created by 张鹏 on 2019/6/11.
+//  Created by DancewithPeng on 2019/6/11.
 //  Copyright © 2019 dancewithpeng@gmail.com. All rights reserved.
 //
 

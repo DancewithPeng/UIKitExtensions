@@ -2,7 +2,7 @@
 //  UINavigationBarExtension.swift
 //  UIKitExtensions
 //
-//  Created by 张鹏 on 2019/6/12.
+//  Created by DancewithPeng on 2019/6/12.
 //  Copyright © 2019 dancewithpeng@gmail.com. All rights reserved.
 //
 

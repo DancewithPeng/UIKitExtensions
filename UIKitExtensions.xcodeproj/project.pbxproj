@@ -87,6 +87,10 @@
 		6EE5CFCF226F2F8E00CE643F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5CFCE226F2F8E00CE643F /* UIImageExtension.swift */; };
 		6EE5CFD1226F3C4300CE643F /* UITextFieldLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5CFD0226F3C4300CE643F /* UITextFieldLimiter.swift */; };
 		6EE5CFD3226F427700CE643F /* UIColorExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5CFD2226F427700CE643F /* UIColorExtensionController.swift */; };
+		6EFCECF128F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCECEF28F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.swift */; };
+		6EFCECF328F567850099F8D4 /* NibViewControllerProviderExampleLibPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCECF028F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.xib */; };
+		6EFCECF528F568A50099F8D4 /* NibViewProviderExampleLibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCECF428F568A50099F8D4 /* NibViewProviderExampleLibView.swift */; };
+		6EFCECF828F569870099F8D4 /* NibViewProviderExampleLibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCECF628F568AD0099F8D4 /* NibViewProviderExampleLibView.xib */; };
 		FDB34450377451E98414E554 /* Pods_UIKitExtensionsExample_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02721F7FAE19FC2091473164 /* Pods_UIKitExtensionsExample_ObjC.framework */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +232,10 @@
 		6EE5CFCE226F2F8E00CE643F /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		6EE5CFD0226F3C4300CE643F /* UITextFieldLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldLimiter.swift; sourceTree = "<group>"; };
 		6EE5CFD2226F427700CE643F /* UIColorExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionController.swift; sourceTree = "<group>"; };
+		6EFCECEF28F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewControllerProviderExampleLibPage.swift; sourceTree = "<group>"; };
+		6EFCECF028F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibViewControllerProviderExampleLibPage.xib; sourceTree = "<group>"; };
+		6EFCECF428F568A50099F8D4 /* NibViewProviderExampleLibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewProviderExampleLibView.swift; sourceTree = "<group>"; };
+		6EFCECF628F568AD0099F8D4 /* NibViewProviderExampleLibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibViewProviderExampleLibView.xib; sourceTree = "<group>"; };
 		8160425733F1084BB54DB8D9 /* Pods-UIKitExtensionsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitExtensionsExample.debug.xcconfig"; path = "Target Support Files/Pods-UIKitExtensionsExample/Pods-UIKitExtensionsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		AF7DE920891C541B54C1B528 /* Pods-UIKitExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitExtensions.release.xcconfig"; path = "Target Support Files/Pods-UIKitExtensions/Pods-UIKitExtensions.release.xcconfig"; sourceTree = "<group>"; };
 		D74741FCE54A7B01DB75D633 /* Pods-UIKitExtensionsExample-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIKitExtensionsExample-ObjC.release.xcconfig"; path = "Target Support Files/Pods-UIKitExtensionsExample-ObjC/Pods-UIKitExtensionsExample-ObjC.release.xcconfig"; sourceTree = "<group>"; };
@@ -494,6 +502,10 @@
 			children = (
 				6EE4E77E28F53C8A00B9F838 /* UICollectionViewExtensionControllerCustomCell.swift */,
 				6EE4E77F28F53C8A00B9F838 /* UICollectionViewExtensionControllerCustomCell.xib */,
+				6EFCECEF28F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.swift */,
+				6EFCECF028F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.xib */,
+				6EFCECF428F568A50099F8D4 /* NibViewProviderExampleLibView.swift */,
+				6EFCECF628F568AD0099F8D4 /* NibViewProviderExampleLibView.xib */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -768,6 +780,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE4E79928F53D0300B9F838 /* UICollectionViewExtensionControllerCustomCell.xib in Resources */,
+				6EFCECF828F569870099F8D4 /* NibViewProviderExampleLibView.xib in Resources */,
+				6EFCECF328F567850099F8D4 /* NibViewControllerProviderExampleLibPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +973,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE4E78F28F53CD800B9F838 /* UICollectionViewExtensionControllerCustomCell.swift in Sources */,
+				6EFCECF528F568A50099F8D4 /* NibViewProviderExampleLibView.swift in Sources */,
+				6EFCECF128F5674A0099F8D4 /* NibViewControllerProviderExampleLibPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

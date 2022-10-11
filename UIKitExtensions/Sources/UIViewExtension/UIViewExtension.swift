@@ -134,7 +134,27 @@ public extension NibViewProvider {
     /// - Parameter nibName: `XIB`文件名
     /// - Returns: 返回`XIB`对应的View
     static func makeFromNib(_ nibName: String? = nil) -> Self? {
-        guard let view = currentBundle.loadNibNamed(nibName ?? "\(self)", owner: nil, options: nil)?.first as? Self else {
+        
+        let targetNibName: String
+        if let nibName {
+            targetNibName = nibName
+        } else {
+            let typeIdentifier = String(reflecting: self)
+            if let tName = typeIdentifier.components(separatedBy: ".").last {
+                targetNibName = tName
+            } else {
+                targetNibName = typeIdentifier
+            }
+        }
+        
+        let targetBundle: Bundle
+        if let viewType = self as? UIView.Type {
+            targetBundle = viewType.moduleBundle
+        } else {
+            targetBundle = Bundle(for: self)
+        }
+        
+        guard let view = targetBundle.loadNibNamed(targetNibName, owner: nil, options: nil)?.first as? Self else {
             return nil
         }
         

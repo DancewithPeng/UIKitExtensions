@@ -147,8 +147,20 @@ public extension NibViewControllerProvider {
     /// - Parameter nibName: `XIB`文件名
     /// - Returns: 返回`XIB`对应的ViewController
     static func makeFromNib(_ nibName: String? = nil) -> Self? {
+                        
+        let targetNibName: String
+        if let nibName {
+            targetNibName = nibName
+        } else {
+            let typeIdentifier = String(reflecting: viewControllerType)
+            if let tName = typeIdentifier.components(separatedBy: ".").last {
+                targetNibName = tName
+            } else {
+                targetNibName = typeIdentifier
+            }
+        }
         
-        guard let viewController = viewControllerType.init(nibName: nibName ?? "\(viewControllerType)", bundle: currentBundle) as? Self else {
+        guard let viewController = viewControllerType.init(nibName: targetNibName, bundle: viewControllerType.moduleBundle) as? Self else {
             return nil
         }
         

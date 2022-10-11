@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIKitExtensionsExampleLib
 
 
 /// `NibViewProvider`的测试用例
@@ -43,5 +44,20 @@ class NibViewProviderExampleViewController: UIViewController {
         diffNameView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         assert(DemoView.makeFromNib("DifferentNameView___asdf") == nil)
+        
+        
+        
+        guard let libView = NibViewProviderExampleLibView.makeFromNib() else {
+            assertionFailure("从xib加载失败")
+            return
+        }
+        
+        view.addSubview(libView)
+        
+        libView.translatesAutoresizingMaskIntoConstraints = false
+        libView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        libView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        libView.topAnchor.constraint(equalTo: diffNameView.bottomAnchor, constant: 15).isActive = true
+        libView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
 }

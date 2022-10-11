@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIKitExtensionsExampleLib
 
 class NibViewControllerProviderExampleViewController: UIViewController {
 
@@ -27,4 +28,12 @@ class NibViewControllerProviderExampleViewController: UIViewController {
             present(diffNameViewController, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func showLibNibPageButtonDidClick(_ sender: Any) {
+        
+        if let libPage = NibViewControllerProviderExampleLibPage.makeFromNib() {
+            present(libPage, animated: true, completion: nil)
+        }
+    }
+    
 }

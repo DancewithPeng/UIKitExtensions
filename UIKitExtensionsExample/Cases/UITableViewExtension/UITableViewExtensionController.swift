@@ -14,7 +14,8 @@ class UITableViewExtensionController: UITableViewController {
         super.viewDidLoad()
 
         // register
-        tableView.registerCell(CustomCell.self)
+        tableView.registerNibCell(UITableViewExtensionControllerCustomCell.self)
+//        tableView.registerCell(UITableViewCell.self)
     }
 
     // MARK: - Table view data source
@@ -29,15 +30,9 @@ class UITableViewExtensionController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // reuse
-        let cell: CustomCell = tableView.dequeueReusableCell(for: indexPath)
+        let cell: UITableViewExtensionControllerCustomCell = tableView.dequeueReusableCell(for: indexPath)
+//        let cell: UITableViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.textLabel?.text = "Custom Cell"
         return cell
-    }
-}
-
-extension UITableViewExtensionController {
-    
-    class CustomCell: UITableViewCell {
-        
     }
 }

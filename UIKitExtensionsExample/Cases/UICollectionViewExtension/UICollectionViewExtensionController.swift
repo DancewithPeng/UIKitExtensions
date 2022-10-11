@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIKitExtensionsExampleLib
 
 private let reuseIdentifier = "Cell"
 
@@ -16,7 +17,8 @@ class UICollectionViewExtensionController: UICollectionViewController, UICollect
         super.viewDidLoad()
 
         // 注册Cell
-        collectionView.registerCell(CustomCell.self)
+//        collectionView.registerCell(CustomCell.self)
+        collectionView.registerNibCell(UICollectionViewExtensionControllerCustomCell.self)
     }
 
     // MARK: UICollectionViewDataSource
@@ -32,7 +34,7 @@ class UICollectionViewExtensionController: UICollectionViewController, UICollect
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: CustomCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: UICollectionViewExtensionControllerCustomCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.backgroundColor = UIColor(red: CGFloat(arc4random()%256)/255.0, green: CGFloat(arc4random()%256)/255.0, blue: CGFloat(arc4random()%256)/255.0, alpha: 1.0)
     
         return cell

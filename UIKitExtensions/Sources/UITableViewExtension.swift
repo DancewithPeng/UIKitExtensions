@@ -16,7 +16,7 @@ public extension UITableView {
     /// - Parameter cellType: Cell的类型
     @objc
     func registerCell(_ cellType: UITableViewCell.Type) {
-        let typeIdentifier = "\(cellType)"
+        let typeIdentifier = String(reflecting: cellType)
         register(cellType, forCellReuseIdentifier: typeIdentifier)
     }
     
@@ -42,7 +42,7 @@ public extension UITableView {
     /// - Parameter indexPath: 对应的indexPath
     /// - Returns: 返回对应类型的Cell
     func dequeueReusableCell<CellType: UITableViewCell>(for indexPath: IndexPath) -> CellType {
-        let typeIdentifier = "\(CellType.self)"
+        let typeIdentifier = String(reflecting: CellType.self)
         // swiftlint:disable force_cast
         return dequeueReusableCell(withIdentifier: typeIdentifier, for: indexPath) as! CellType
     }
@@ -52,7 +52,7 @@ public extension UITableView {
     /// - Parameter sectionHeaderFooterType: section头部或尾部的类型
     @objc
     func registerSectionHeaderFooter(_ sectionHeaderFooterType: UITableViewHeaderFooterView.Type) {
-        let typeIdentifier = "\(sectionHeaderFooterType)"
+        let typeIdentifier = String(reflecting: sectionHeaderFooterType)
         register(sectionHeaderFooterType, forHeaderFooterViewReuseIdentifier: typeIdentifier)
     }
     
@@ -78,7 +78,7 @@ public extension UITableView {
     /// - Parameter indexPath: 对应的indexPath
     /// - Returns: 返回对应类型的Cell
     func dequeueReusableSectionHeaderFooter<HeaderFooterType: UITableViewHeaderFooterView>() -> HeaderFooterType {
-        let typeIdentifier = "\(HeaderFooterType.self)"
+        let typeIdentifier = String(reflecting: HeaderFooterType.self)
         // swiftlint:disable force_cast
         return dequeueReusableHeaderFooterView(withIdentifier: typeIdentifier) as! HeaderFooterType
     }

@@ -16,7 +16,7 @@ public extension UICollectionView {
     /// - Parameter cellType: Cell的类型
     @objc
     func registerCell(_ cellType: UICollectionViewCell.Type) {
-        let typeIdentifier = "\(cellType)"
+        let typeIdentifier = String(reflecting: cellType)
         register(cellType, forCellWithReuseIdentifier: typeIdentifier)
     }
     
@@ -25,7 +25,7 @@ public extension UICollectionView {
     /// - Parameter cellType: Cell的类型
     @objc
     func registerNibCell(_ cellType: UICollectionViewCell.Type, in bundle: Bundle?) {
-        let typeIdentifier = "\(cellType)"
+        let typeIdentifier = String(reflecting: cellType)
         register(UINib.make(for: cellType, bundle: bundle), forCellWithReuseIdentifier: typeIdentifier)
     }
     
@@ -44,7 +44,7 @@ public extension UICollectionView {
     ///   - kind: SupplementaryView对应的kind
     @objc
     func registerSupplementaryView(_ supplementaryViewType: UICollectionReusableView.Type, forKind kind: String) {
-        let typeIdentifier = "\(supplementaryViewType)"
+        let typeIdentifier = String(reflecting: supplementaryViewType)
         register(supplementaryViewType, forSupplementaryViewOfKind: kind, withReuseIdentifier: typeIdentifier)
     }
     
@@ -55,7 +55,7 @@ public extension UICollectionView {
     ///   - kind: SupplementaryView对应的kind
     @objc
     func registerNibSupplementaryView(_ supplementaryViewType: UICollectionReusableView.Type, forKind kind: String, in bundle: Bundle?) {
-        let typeIdentifier = "\(supplementaryViewType)"
+        let typeIdentifier = String(reflecting: supplementaryViewType)
         register(UINib.make(for: supplementaryViewType, bundle: bundle), forSupplementaryViewOfKind: kind, withReuseIdentifier: typeIdentifier)
     }
     
@@ -74,7 +74,7 @@ public extension UICollectionView {
     /// - Parameter indexPath: 对应的indexPath
     /// - Returns: 返回对应类型的Cell
     func dequeueReusableCell<CellType: UICollectionViewCell>(for indexPath: IndexPath) -> CellType {
-        let typeIdentifier = "\(CellType.self)"
+        let typeIdentifier = String(reflecting: CellType.self)
         // swiftlint:disable force_cast
         return dequeueReusableCell(withReuseIdentifier: typeIdentifier, for: indexPath) as! CellType
     }
@@ -86,7 +86,7 @@ public extension UICollectionView {
     ///   - indexPath: 对应的indexPath
     /// - Returns: 返回对应类型的 SupplementaryView
     func dequeueReusableSupplementaryView<SupplementaryType>(ofKind kind: String, for indexPath: IndexPath) -> SupplementaryType {
-        let typeIdentifier = "\(SupplementaryType.self)"
+        let typeIdentifier = String(reflecting: SupplementaryType.self)
         // swiftlint:disable force_cast
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: typeIdentifier, for: indexPath) as! SupplementaryType
     }

@@ -16,7 +16,7 @@ protocol ModuleBundleProvider: AnyObject {
 extension ModuleBundleProvider {
     
     static var moduleBundle: Bundle {
-        let targetBundle = Bundle(for: Self.self)
+        let targetBundle = Bundle(for: self)
         let typeName = String(reflecting: self)
         let moduleName: String
         if let mName = typeName.components(separatedBy: ".").first {

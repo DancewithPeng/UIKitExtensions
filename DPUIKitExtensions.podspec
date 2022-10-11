@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "DPUIKitExtensions"
-  spec.version      = "1.2.1"
+  spec.version      = "1.2.2"
   spec.summary      = "UIKit的相关扩展"
   spec.description  = <<-DESC
                       UIKit的相关扩展，为了方便使用UIKit的API
@@ -9,8 +9,8 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "DP" => "dancewithpeng@gmail.com" }
 
-  spec.platform     = :ios, "10.0"  
-  spec.swift_version = '5.2'
+  spec.platform     = :ios, "12.0"  
+  spec.swift_version = '5.7'
   
   spec.source       = { :git => "https://github.com/DancewithPeng/UIKitExtensions.git", :tag => "#{spec.version}" }
   spec.source_files = "UIKitExtensions/Sources", "UIKitExtensions/Sources/**/*.{swift}"

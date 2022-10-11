@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "DPUIKitExtensions"
-  spec.version      = "1.2.2"
+  spec.version      = "1.2.3"
   spec.summary      = "UIKit的相关扩展"
   spec.description  = <<-DESC
                       UIKit的相关扩展，为了方便使用UIKit的API

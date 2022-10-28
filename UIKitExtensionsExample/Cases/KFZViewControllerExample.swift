@@ -27,44 +27,30 @@ class ExtendedViewControllerExample: ExtendedViewController {
 
 
 class MyExtendedViewController: ExtendedViewController  {
+        
+    lazy var scrollView = UIScrollView(frame: .zero)
+    lazy var contentView = UIView(frame: .zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentView.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
+        contentView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 2)
         
-//        view.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
-        view.backgroundColor = .white
+        scrollView.addSubview(contentView)
+        scrollView.contentSize = contentView.frame.size
+        scrollView.contentInsetAdjustmentBehavior = .never
         
-//        self.transparentNavigationBar = Bool.random()
+        view.addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive     = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive       = true
+        scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive   = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
         self.hidesNavigationBar = Bool.random()
         self.transparentNavigationBar = Bool.random()
         self.hidesNavigationBarSeparator = Bool.random()
-        
-        print("hidesNavigationBar: \(hidesNavigationBar), transparentNavigationBar: \(transparentNavigationBar), hidesNavigationBarSeparator: \(hidesNavigationBarSeparator)")
-        
-//        switch navigationController!.viewControllers.count {
-//        case 2:
-//            break
-//        case 3: // 隐藏导航栏
-//            hidesNavigationBar = true
-//        case 4: // 透明导航栏
-//            hidesNavigationBar = false
-//            transparentNavigationBar = true
-//        case 5: // 显示导航栏，但是隐藏分割线
-//            hidesNavigationBar = false
-//            transparentNavigationBar = false
-//            hidesNavigationBarSeparator = true
-//        case 6: // 显示导航栏，显示自定义分割线
-//            hidesNavigationBar = false
-//            hidesNavigationBarSeparator = false
-////            navigationBarSeparatorImage = currentBundle.image(named: "线")
-//            view.backgroundColor = .white
-//        default:
-//            hidesNavigationBar = false
-//            hidesNavigationBarSeparator = false
-//            view.backgroundColor = .white
-//            break
-//        }
         
         let pushedBtn = UIButton(type: .system)
         pushedBtn.setTitle("下一页", for: .normal)
@@ -87,6 +73,21 @@ class MyExtendedViewController: ExtendedViewController  {
             make.centerY.equalTo(view).offset(-80)
         }
         backBtn.addTarget(self, action: #selector(backBtnDidClick(_:)), for: .touchUpInside)
+        
+        let label = UILabel(frame: .zero)
+        label.numberOfLines = 0
+        label.textColor = isLightColor(contentView.backgroundColor!) ? .darkText : .lightText
+        label.text = """
+                     hidesNavigationBar: \(hidesNavigationBar)
+                     transparentNavigationBar: \(transparentNavigationBar)
+                     hidesNavigationBarSeparator: \(hidesNavigationBarSeparator)
+                     """
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: pushedBtn.bottomAnchor, constant: 30).isActive = true
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+
     }
     
     @objc
@@ -97,5 +98,15 @@ class MyExtendedViewController: ExtendedViewController  {
     @objc
     func backBtnDidClick(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func isLightColor(_ color: UIColor) -> Bool {
+        var brightness: CGFloat = 0
+        color.getHue(nil, saturation: nil, brightness: &brightness, alpha: nil)
+        if brightness > 0.5 {
+            return true
+        } else {
+            return false
+        }
     }
 }

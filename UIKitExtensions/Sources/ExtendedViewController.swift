@@ -60,51 +60,81 @@ open class ExtendedViewController: UIViewController {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // 隐藏显示导航栏
+        // 隐藏导航栏
         if hidesNavigationBar {
             navigationController?.setNavigationBarHidden(true, animated: animated)
             return
         }
-                        
+        
+        // 显示导航栏
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+                                
         // 让导航栏透明
         if transparentNavigationBar {
-            let transparentImage = UIImage()
-            navigationController?.navigationBar.setBackgroundImage(transparentImage, for: .default)
-            navigationController?.navigationBar.shadowImage = transparentImage
-            
-            // 显示导航栏
-            navigationController?.setNavigationBarHidden(false, animated: animated)
+            if #available(iOS 13, *) {
+                let navigationBarAppearanceTransparentAction: (UINavigationBarAppearance) -> Void = { barAppearance in
+                    barAppearance.configureWithTransparentBackground()
+                }
+                setupNavigationBarStandardAppearance(with: navigationBarAppearanceTransparentAction)
+                setupNavigationBarScrollEdgeAppearance(with: navigationBarAppearanceTransparentAction)
+            } else {
+                let transparentImage = UIImage()
+                navigationController?.navigationBar.setBackgroundImage(transparentImage, for: .default)
+                navigationController?.navigationBar.shadowImage = transparentImage
+                
+                // 显示导航栏
+                navigationController?.setNavigationBarHidden(false, animated: animated)
+            }
             return
         }
         
         // 导航栏不透明
-        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        
+        if #available(iOS 13, *) {
+            let navigationBarAppearanceTransparentAction: (UINavigationBarAppearance) -> Void = { barAppearance in
+                barAppearance.configureWithDefaultBackground()
+            }
+            setupNavigationBarStandardAppearance(with: navigationBarAppearanceTransparentAction)
+            setupNavigationBarScrollEdgeAppearance(with: navigationBarAppearanceTransparentAction)
+        } else {
+            navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        }
+               
         // 隐藏导航栏分割线
         if hidesNavigationBarSeparator {
-            if navigationController?.navigationBar.separatorView != nil {
-                navigationController?.navigationBar.separatorView?.isHidden = true
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-                    self?.navigationController?.navigationBar.separatorView?.isHidden = true
+            if #available(iOS 13, *) {
+                let navigationBarAppearanceTransparentAction: (UINavigationBarAppearance) -> Void = { barAppearance in
+                    barAppearance.shadowImage = UIImage()
+                    barAppearance.shadowColor = nil
                 }
+                setupNavigationBarStandardAppearance(with: navigationBarAppearanceTransparentAction)
+                setupNavigationBarScrollEdgeAppearance(with: navigationBarAppearanceTransparentAction)
+            } else {
+                if navigationController?.navigationBar.separatorView != nil {
+                    navigationController?.navigationBar.separatorView?.isHidden = true
+                } else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+                        self?.navigationController?.navigationBar.separatorView?.isHidden = true
+                    }
+                }
+                navigationController?.navigationBar.shadowImage = UIImage()
             }
-            navigationController?.navigationBar.shadowImage = UIImage()
-            
-            // 显示导航栏
-            navigationController?.setNavigationBarHidden(false, animated: animated)
-            
             return
         }
         
         // 显示导航栏分割线
-        navigationController?.navigationBar.separatorView?.isHidden = false
         
-        // 自定义导航栏分割线
-        navigationController?.navigationBar.shadowImage = navigationBarSeparatorImage
-        
-        // 显示导航栏
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        if #available(iOS 13, *) {
+            let navigationBarAppearanceTransparentAction: (UINavigationBarAppearance) -> Void = { barAppearance in
+                barAppearance.shadowImage = nil
+                barAppearance.shadowColor = nil
+            }
+            setupNavigationBarStandardAppearance(with: navigationBarAppearanceTransparentAction)
+            setupNavigationBarScrollEdgeAppearance(with: navigationBarAppearanceTransparentAction)
+        } else {
+            navigationController?.navigationBar.separatorView?.isHidden = false
+            navigationController?.navigationBar.shadowImage = navigationBarSeparatorImage
+        }
     }
     
     deinit {
@@ -130,5 +160,44 @@ open class ExtendedViewController: UIViewController {
     // MARK: - Style
     open override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+}
+
+// MARK: - Helper Methods
+
+extension ExtendedViewController {
+    
+    @available(iOS 13, *)
+    private func setupNavigationBarStandardAppearance(with action: (UINavigationBarAppearance) -> Void) {
+        
+        guard let navigationController = self.navigationController else {
+            return
+        }
+        
+        let standardAppearance = navigationController.navigationBar.standardAppearance
+        action(standardAppearance)
+        navigationController.navigationBar.standardAppearance = standardAppearance
+    }
+    
+    @available(iOS 13, *)
+    private func setupNavigationBarScrollEdgeAppearance(with action: (UINavigationBarAppearance) -> Void) {
+        
+        guard let navigationController = self.navigationController else {
+            return
+        }
+        
+        let scrollEdgeAppearance: UINavigationBarAppearance
+        if let originalScrollEdgeAppearance = navigationController.navigationBar.scrollEdgeAppearance {
+            scrollEdgeAppearance = originalScrollEdgeAppearance
+        } else {
+            scrollEdgeAppearance = UINavigationBarAppearance()
+        }
+                 
+        action(scrollEdgeAppearance)
+        navigationController.navigationBar.scrollEdgeAppearance = scrollEdgeAppearance
+    }
+    
+    private func setupNavigationBarHidden(_ isHidden: Bool, animated: Bool) {
+        
     }
 }

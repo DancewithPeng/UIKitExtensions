@@ -19,14 +19,30 @@ public extension String {
     ///   - lines: 文本行数
     /// - Returns: 返回`String`在UILabel布局中所占的尺寸
     func labelLayoutSizeThatFits(_ maxSize: CGSize, font: UIFont? = nil, lines: Int = 0) -> CGSize {
-        let label = UILabel(frame: CGRect(origin: CGPoint.zero, size: maxSize))
-        label.text = self
-        label.numberOfLines = lines
         
-        if let font = font {
-            label.font = font
+        let targetMaxSize: CGSize
+        let targetFont: UIFont
+        
+        if let font {
+            targetFont = font
+        } else {
+            targetFont = .systemFont(ofSize: 17)
         }
-        return label.sizeThatFits(maxSize)
+        
+        if lines > 0 {
+            targetMaxSize = CGSize(width: maxSize.width, height: min(CGFloat(lines) * targetFont.lineHeight, maxSize.height))
+        } else {
+            targetMaxSize = maxSize
+        }
+        
+        let result = (self as NSString).boundingRect(with: targetMaxSize,
+                                                     options: [.usesFontLeading, .usesLineFragmentOrigin],
+                                                     attributes: [
+                                                      .font: targetFont
+                                                     ],
+                                                     context: nil).size
+        
+        return CGSize(width: ceil(result.width), height: ceil(result.height))
     }
     
     /// 计算`string`在UILabel布局中的高度
@@ -63,10 +79,35 @@ public extension NSAttributedString {
     ///   - lines: 文本行数
     /// - Returns: 返回`NSAttributedString`在UILabel布局中所占的尺寸
     func labelLayoutSizeThatFits(_ maxSize: CGSize, lines: Int = 0) -> CGSize {
-        let label = UILabel(frame: CGRect(origin: CGPoint.zero, size: maxSize))
-        label.attributedText = self
-        label.numberOfLines = lines
-        return label.sizeThatFits(maxSize)
+        
+        let targetMaxSize: CGSize
+        if lines > 0 {
+            let attributes = self.attributes(at: 0, effectiveRange: nil)
+            if let font = attributes[.font] as? UIFont {
+                let lineHeight: CGFloat
+                let lineSpacing: CGFloat
+                if let paragraphStyle = attributes[.paragraphStyle] as? NSParagraphStyle {
+                    lineSpacing = paragraphStyle.lineSpacing
+                    lineHeight = max(paragraphStyle.minimumLineHeight, font.lineHeight)
+                } else {
+                    lineHeight = font.lineHeight
+                    lineSpacing = 0
+                }
+                
+                targetMaxSize = CGSize(width: maxSize.width,
+                                       height: CGFloat(lines) * lineHeight + (lineSpacing * CGFloat(lines - 1)))
+                
+            } else {
+                targetMaxSize = maxSize
+            }
+        } else {
+            targetMaxSize = maxSize
+        }
+        
+        let result = self.boundingRect(with: targetMaxSize,
+                                       options: [.usesFontLeading, .usesLineFragmentOrigin],
+                                       context: nil).size
+        return CGSize(width: ceil(result.width), height: ceil(result.height))
     }
     
     /// 计算`NSAttributedString`在UILabel布局中的高度

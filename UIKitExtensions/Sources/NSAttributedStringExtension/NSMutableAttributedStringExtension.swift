@@ -45,7 +45,7 @@ extension NSMutableAttributedString {
             stringAttributes[NSAttributedString.Key.kern] = locWordSpace
         }
         
-        // 设置行间距和对其模式
+        // 设置行间距和对齐模式
         if lineSpace != nil || alignment != nil {
             
             let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
@@ -55,7 +55,7 @@ extension NSMutableAttributedString {
                 paragraphStyle.lineSpacing = locLineSpace
             }
             
-            // 对其模式
+            // 对齐模式
             if let locAlignment = alignment {
                 paragraphStyle.alignment = locAlignment
             }

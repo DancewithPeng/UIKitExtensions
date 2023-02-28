@@ -17,7 +17,7 @@ public extension NSAttributedString {
     ///   - font: 字体
     ///   - color: 颜色
     ///   - lineHeight: 行高
-    convenience init(string: String, font: UIFont? = nil, color: UIColor? = nil, minimumLineHeight: CGFloat? = nil) {
+    convenience init(string: String, font: UIFont? = nil, color: UIColor? = nil, lineHeight: CGFloat? = nil) {
         
         var attributes: [NSAttributedString.Key: Any] = [:]
         
@@ -29,9 +29,9 @@ public extension NSAttributedString {
             attributes[NSAttributedString.Key.foregroundColor] = textColor
         }
         
-        if let textMinimumLineHeight = minimumLineHeight {
+        if let lineHeight {
             let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = textMinimumLineHeight - (font?.lineHeight ?? 0)
+            paragraphStyle.lineSpacing = lineHeight - (font?.lineHeight ?? 0)
             
             attributes[NSAttributedString.Key.paragraphStyle] = paragraphStyle
         }
@@ -54,9 +54,9 @@ public extension String {
     /// - Parameters:
     ///   - font: 字体
     ///   - color: 颜色
-    ///   - minimumLineHeight: 最小行高
+    ///   - lineHeight: 行高
     /// - Returns: 返回对应的NSAttributedString对象
-    func attributedString(font: UIFont? = nil, color: UIColor? = nil, minimumLineHeight: CGFloat? = nil) -> NSAttributedString {
-        return NSAttributedString(string: self, font: font, color: color, minimumLineHeight: minimumLineHeight)
+    func attributedString(font: UIFont? = nil, color: UIColor? = nil, lineHeight: CGFloat? = nil) -> NSAttributedString {
+        return NSAttributedString(string: self, font: font, color: color, lineHeight: lineHeight)
     }
 }

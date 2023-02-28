@@ -81,7 +81,7 @@ public extension NSAttributedString {
     func labelLayoutSizeThatFits(_ maxSize: CGSize, lines: Int = 0) -> CGSize {
         
         let targetMaxSize: CGSize
-        if lines > 0 {
+        if lines > 0, self.string.count > 0 {
             let attributes = self.attributes(at: 0, effectiveRange: nil)
             if let font = attributes[.font] as? UIFont {
                 let lineHeight: CGFloat

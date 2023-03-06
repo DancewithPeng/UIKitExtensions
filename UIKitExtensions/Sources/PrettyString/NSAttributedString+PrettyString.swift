@@ -23,7 +23,7 @@ extension NSAttributedString {
     public static func makePrettyString(
         for content: String,
         font: UIFont,
-        lineHeight: CGFloat,
+        lineHeight: CGFloat? = nil,
         color: UIColor? = nil,
         alignment: NSTextAlignment? = nil
     ) -> NSAttributedString {
@@ -45,7 +45,7 @@ extension NSAttributedString {
     public static func makePrettyString(
         for content: String,
         font: UIFont,
-        lineSpacing: CGFloat,
+        lineSpacing: CGFloat? = nil,
         color: UIColor? = nil,
         alignment: NSTextAlignment? = nil
     ) -> NSAttributedString {

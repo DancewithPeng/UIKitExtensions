@@ -7,7 +7,7 @@ UIKit的使用封装
 ## 导入
 
 ```ruby
-pod 'DPUIKitExtensions', '~> 1.3.1'
+pod 'DPUIKitExtensions', '~> 1.4.0'
 ```
 
 

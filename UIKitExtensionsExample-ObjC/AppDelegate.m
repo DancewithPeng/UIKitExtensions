@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <DPLog/DPLog.h>
+#import <DPLog/DPLog-Swift.h>
+#import "UIKitExtensionsExample_ObjC-Swift.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [DPLogCoordinator setupDPLog];
+
     return YES;
 }
 

@@ -22,7 +22,18 @@
     
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidTap:)]];
     
-    UITableView *tableView;
+    CGFloat width = [@"Hello world" layoutWidthThatFitsHeight:CGFLOAT_MAX
+                                                         font:[UIFont systemFontOfSize:18 weight:UIFontWeightMedium]];
+    DPLogDebug(width);
+    
+    NSAttributedString *text = [NSAttributedString makePrettyStringForContent:@"Hello world"
+                                                                         font:[UIFont systemFontOfSize:18
+                                                                                                weight:UIFontWeightMedium]
+                                                                  lineSpacing:15];
+    CGFloat textWidth = [text layoutWidthThatFitsHeight:CGFLOAT_MAX];
+    DPLogDebug(textWidth);
+    
+//    CGSize size = [@"malsdkfj;askdfj;ald a;dslkfjas;dfk " ]
 }
 
 - (void)viewDidTap:(id)sender {

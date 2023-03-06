@@ -40,7 +40,7 @@ class StringLayoutSizeExtensionViewController: UIViewController {
         label.lineBreakMode   = .byTruncatingTail
         view.addSubview(label)
         
-        let attTextHeight = attText.labelLayoutHeightThatFits(width: UIScreen.main.bounds.size.width, lines: 3)
+        let attTextHeight = attText.layoutHeightThatFits(width: UIScreen.main.bounds.size.width, lines: 3)
         Log.debug(attTextHeight)
         
         label.snp.makeConstraints { (make) in
@@ -52,11 +52,11 @@ class StringLayoutSizeExtensionViewController: UIViewController {
         let text = "这是一个文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本"
         let textFont = UIFont.systemFont(ofSize: 30)
 
-        let fixedSize = text.labelLayoutSizeThatFits(CGSize(width: view.bounds.width-40,
+        let fixedSize = text.layoutSizeThatFits(CGSize(width: view.bounds.width-40,
                                                             height: CGFloat.greatestFiniteMagnitude),
                                                      font: textFont)
         Log.debug(fixedSize)
-        
+
         let stringLayoutSizeLabel = UILabel(frame: CGRect(x: 20, y: 100, width: fixedSize.width, height: fixedSize.height))
         stringLayoutSizeLabel.font = textFont
         stringLayoutSizeLabel.text = text
@@ -76,7 +76,7 @@ class StringLayoutSizeExtensionViewController: UIViewController {
             .underlineColor: UIColor.red
             ], range: NSRange(location: 30, length: 3))
 
-        let fixedSize2 = attributedText.labelLayoutSizeThatFits(CGSize(width: view.bounds.width-40,
+        let fixedSize2 = attributedText.layoutSizeThatFits(size: CGSize(width: view.bounds.width-40,
                                                                        height: CGFloat.greatestFiniteMagnitude))
 
         let attributedStringLayoutSizeLabel = UILabel(frame: CGRect(x: 20, y: 100+fixedSize.height+30, width: fixedSize2.width, height: fixedSize2.height))
@@ -97,9 +97,9 @@ class StringLayoutSizeExtensionViewController: UIViewController {
             .underlineColor: UIColor.red
             ], range: NSRange(location: 30, length: 3))
 
-        let fixedSize3 = attributedText3.labelLayoutSizeThatFits(CGSize(width: view.bounds.width-40, height: CGFloat.greatestFiniteMagnitude), lines: 2)
-
-        let attributedStringLayoutSizeLabel3 = UILabel(frame: CGRect(x: 20, y: 350+fixedSize2.height+30, width: fixedSize3.width, height: fixedSize3.height))
+        let fixedSize3 = attributedText3.layoutSizeThatFits(size: CGSize(width: view.bounds.width-40, height: CGFloat.greatestFiniteMagnitude), lines: 2)
+        
+        let attributedStringLayoutSizeLabel3 = UILabel(frame: CGRect(x: 20, y: 350+fixedSize2.height+60, width: fixedSize3.width, height: fixedSize3.height))
         attributedStringLayoutSizeLabel3.attributedText = attributedText3
         attributedStringLayoutSizeLabel3.numberOfLines = 2
         attributedStringLayoutSizeLabel3.backgroundColor = UIColor(white: 0.8, alpha: 1.0)

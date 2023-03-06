@@ -33,8 +33,8 @@ class NSAttributedStringExtensionController: UIViewController {
 
                          微服务使得应用程序开发变得更快更容易管理，它只需要较少的人力就能实现更多的功能，可以更快更容易地部署。将应用程序设计成一套微服务，它更加容易在多台有负载均衡的服务器上运行，而且能轻松应对需求高峰、由于时间推移而平稳增长的需求和由于硬件或者软件问题导致的宕机事故。
                          """
-        self.textView.attributedText = secondText.attributedString(font: UIFont.systemFont(ofSize: 8, weight: .bold),
-                                                                   color: .brown,
-                                                                   lineHeight: 30)
+        self.textView.attributedText = secondText.makePrettyString(font: UIFont.systemFont(ofSize: 8, weight: .bold),
+                                                                   lineHeight: 30,
+                                                                   color: .brown)
     }
 }

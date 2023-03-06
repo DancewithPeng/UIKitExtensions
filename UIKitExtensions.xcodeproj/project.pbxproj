@@ -23,11 +23,9 @@
 		6E155C9E2271DC7F00513B00 /* TestNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E155C9D2271DC7F00513B00 /* TestNavigationController.swift */; };
 		6E26796A2271425E00706F46 /* ExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2679692271425E00706F46 /* ExtendedViewController.swift */; };
 		6E3B7A6922B09B1700B5DE4F /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B7A6822B09B1700B5DE4F /* UINavigationBarExtension.swift */; };
-		6E59B97422A8BFB200415BAA /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59B97322A8BFB200415BAA /* UILabelExtension.swift */; };
 		6E59B97622A8C0EA00415BAA /* StringLayoutSizeExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59B97522A8C0EA00415BAA /* StringLayoutSizeExtensionViewController.swift */; };
 		6E5B8B5024ADA95A00487C34 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B8B4F24ADA95A00487C34 /* UIKitExtensions.swift */; };
 		6E5B8B5324ADC48D00487C34 /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B8B5224ADC48D00487C34 /* NSMutableAttributedStringExtension.swift */; };
-		6E5B8B5524ADC4BE00487C34 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B8B5424ADC4BE00487C34 /* NSAttributedStringExtension.swift */; };
 		6E652E4722927B0200D7F458 /* KFZViewControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E652E4622927B0200D7F458 /* KFZViewControllerExample.swift */; };
 		6E6C72B72302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C72B62302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift */; };
 		6E6C72BA2302E41600B15E18 /* SameNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6C72B82302E41600B15E18 /* SameNameViewController.swift */; };
@@ -46,6 +44,15 @@
 		6E7533AD24B5C3E600FB9DF4 /* UIKitExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E008CCC226D635400EA70FE /* UIKitExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E8858D82273EAFC006C27CC /* UIApplicationExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8858D72273EAFC006C27CC /* UIApplicationExtensionViewController.swift */; };
 		6E8BAEA6232F5BD800BE18CA /* PickingResultExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8BAEA5232F5BD800BE18CA /* PickingResultExampleViewController.swift */; };
+		6E8EFDD629B5C72B00117F4D /* DPLogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDD529B5C72B00117F4D /* DPLogCoordinator.swift */; };
+		6E8EFDD929B5CBC900117F4D /* StringLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDD829B5CBC900117F4D /* StringLayoutSizeCalculator.swift */; };
+		6E8EFDDB29B5CC1600117F4D /* LayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDDA29B5CC1600117F4D /* LayoutSizeCalculator.swift */; };
+		6E8EFDDD29B5CD8900117F4D /* NSAttributedStringLayoutSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDDC29B5CD8900117F4D /* NSAttributedStringLayoutSizeCalculator.swift */; };
+		6E8EFDDF29B5CE0200117F4D /* String+LayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDDE29B5CE0200117F4D /* String+LayoutSize.swift */; };
+		6E8EFDE129B5CE1600117F4D /* NSAttributedString+LayoutSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDE029B5CE1600117F4D /* NSAttributedString+LayoutSize.swift */; };
+		6E8EFDE829B5D90900117F4D /* PrettyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDE729B5D90900117F4D /* PrettyString.swift */; };
+		6E8EFDEA29B5E05F00117F4D /* NSAttributedString+PrettyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDE929B5E05F00117F4D /* NSAttributedString+PrettyString.swift */; };
+		6E8EFDEC29B5E09000117F4D /* String+PrettyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8EFDEB29B5E09000117F4D /* String+PrettyString.swift */; };
 		6E9816BA22FBF72400CBF61A /* NibViewProviderExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9816B922FBF72400CBF61A /* NibViewProviderExampleViewController.swift */; };
 		6E9816BD22FBF77100CBF61A /* SameNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9816BC22FBF77100CBF61A /* SameNameView.swift */; };
 		6E9816BF22FBF77B00CBF61A /* SameNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9816BE22FBF77B00CBF61A /* SameNameView.xib */; };
@@ -164,11 +171,9 @@
 		6E155C9D2271DC7F00513B00 /* TestNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationController.swift; sourceTree = "<group>"; };
 		6E2679692271425E00706F46 /* ExtendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedViewController.swift; sourceTree = "<group>"; };
 		6E3B7A6822B09B1700B5DE4F /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
-		6E59B97322A8BFB200415BAA /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		6E59B97522A8C0EA00415BAA /* StringLayoutSizeExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLayoutSizeExtensionViewController.swift; sourceTree = "<group>"; };
 		6E5B8B4F24ADA95A00487C34 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		6E5B8B5224ADC48D00487C34 /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
-		6E5B8B5424ADC4BE00487C34 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		6E652E4622927B0200D7F458 /* KFZViewControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFZViewControllerExample.swift; sourceTree = "<group>"; };
 		6E6C72B62302E3AC00B15E18 /* NibViewControllerProviderExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewControllerProviderExampleViewController.swift; sourceTree = "<group>"; };
 		6E6C72B82302E41600B15E18 /* SameNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameNameViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +196,16 @@
 		6E8858D72273EAFC006C27CC /* UIApplicationExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensionViewController.swift; sourceTree = "<group>"; };
 		6E8858D9227406AE006C27CC /* UIKitExtensionsExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKitExtensionsExample.entitlements; sourceTree = "<group>"; };
 		6E8BAEA5232F5BD800BE18CA /* PickingResultExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickingResultExampleViewController.swift; sourceTree = "<group>"; };
+		6E8EFDD429B5C72B00117F4D /* UIKitExtensionsExample-ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtensionsExample-ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E8EFDD529B5C72B00117F4D /* DPLogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLogCoordinator.swift; sourceTree = "<group>"; };
+		6E8EFDD829B5CBC900117F4D /* StringLayoutSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLayoutSizeCalculator.swift; sourceTree = "<group>"; };
+		6E8EFDDA29B5CC1600117F4D /* LayoutSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSizeCalculator.swift; sourceTree = "<group>"; };
+		6E8EFDDC29B5CD8900117F4D /* NSAttributedStringLayoutSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringLayoutSizeCalculator.swift; sourceTree = "<group>"; };
+		6E8EFDDE29B5CE0200117F4D /* String+LayoutSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LayoutSize.swift"; sourceTree = "<group>"; };
+		6E8EFDE029B5CE1600117F4D /* NSAttributedString+LayoutSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+LayoutSize.swift"; sourceTree = "<group>"; };
+		6E8EFDE729B5D90900117F4D /* PrettyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyString.swift; sourceTree = "<group>"; };
+		6E8EFDE929B5E05F00117F4D /* NSAttributedString+PrettyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+PrettyString.swift"; sourceTree = "<group>"; };
+		6E8EFDEB29B5E09000117F4D /* String+PrettyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PrettyString.swift"; sourceTree = "<group>"; };
 		6E9816B922FBF72400CBF61A /* NibViewProviderExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibViewProviderExampleViewController.swift; sourceTree = "<group>"; };
 		6E9816BC22FBF77100CBF61A /* SameNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameNameView.swift; sourceTree = "<group>"; };
 		6E9816BE22FBF77B00CBF61A /* SameNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SameNameView.xib; sourceTree = "<group>"; };
@@ -338,9 +353,10 @@
 				6EC0A0452272A13E003DC6B6 /* UIDeviceExtension.swift */,
 				6EC0A04C2272F729003DC6B6 /* UIScreenExtension.swift */,
 				6EAF1ECD22730ADD0011A84D /* UIApplicationExtension.swift */,
-				6E59B97322A8BFB200415BAA /* UILabelExtension.swift */,
 				6E7333CB22AF897500034910 /* UISearchBarExtension.swift */,
 				6E3B7A6822B09B1700B5DE4F /* UINavigationBarExtension.swift */,
+				6E8EFDD729B5C98900117F4D /* LayoutSize */,
+				6E8EFDE629B5D8F100117F4D /* PrettyString */,
 				6E5B8B5124ADC48D00487C34 /* NSAttributedStringExtension */,
 				6EDF864E22E0789400927FCF /* UITextViewExtension */,
 				6EDF864D22E0787A00927FCF /* UITextFieldExtension */,
@@ -378,7 +394,6 @@
 		6E5B8B5124ADC48D00487C34 /* NSAttributedStringExtension */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B8B5424ADC4BE00487C34 /* NSAttributedStringExtension.swift */,
 				6E5B8B5224ADC48D00487C34 /* NSMutableAttributedStringExtension.swift */,
 			);
 			path = NSAttributedStringExtension;
@@ -409,8 +424,48 @@
 				6E7533A324B5C3BF00FB9DF4 /* LaunchScreen.storyboard */,
 				6E7533A624B5C3BF00FB9DF4 /* Info.plist */,
 				6E7533A724B5C3BF00FB9DF4 /* main.m */,
+				6E8EFDD529B5C72B00117F4D /* DPLogCoordinator.swift */,
+				6E8EFDD429B5C72B00117F4D /* UIKitExtensionsExample-ObjC-Bridging-Header.h */,
 			);
 			path = "UIKitExtensionsExample-ObjC";
+			sourceTree = "<group>";
+		};
+		6E8EFDD729B5C98900117F4D /* LayoutSize */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EFDE429B5D18700117F4D /* Calculators */,
+				6E8EFDE529B5D18E00117F4D /* Extensions */,
+			);
+			path = LayoutSize;
+			sourceTree = "<group>";
+		};
+		6E8EFDE429B5D18700117F4D /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EFDDA29B5CC1600117F4D /* LayoutSizeCalculator.swift */,
+				6E8EFDD829B5CBC900117F4D /* StringLayoutSizeCalculator.swift */,
+				6E8EFDDC29B5CD8900117F4D /* NSAttributedStringLayoutSizeCalculator.swift */,
+			);
+			path = Calculators;
+			sourceTree = "<group>";
+		};
+		6E8EFDE529B5D18E00117F4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EFDDE29B5CE0200117F4D /* String+LayoutSize.swift */,
+				6E8EFDE029B5CE1600117F4D /* NSAttributedString+LayoutSize.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E8EFDE629B5D8F100117F4D /* PrettyString */ = {
+			isa = PBXGroup;
+			children = (
+				6E8EFDE729B5D90900117F4D /* PrettyString.swift */,
+				6E8EFDEB29B5E09000117F4D /* String+PrettyString.swift */,
+				6E8EFDE929B5E05F00117F4D /* NSAttributedString+PrettyString.swift */,
+			);
+			path = PrettyString;
 			sourceTree = "<group>";
 		};
 		6E9816BB22FBF74400CBF61A /* NibViewProviderExample */ = {
@@ -702,6 +757,7 @@
 					};
 					6E75339224B5C3BD00FB9DF4 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1420;
 					};
 					6EE4E78628F53CBB00B9F838 = {
 						CreatedOnToolsVersion = 14.0;
@@ -895,32 +951,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8EFDDD29B5CD8900117F4D /* NSAttributedStringLayoutSizeCalculator.swift in Sources */,
 				6EDF865222E08A5100927FCF /* UITextViewExtension.swift in Sources */,
-				6E5B8B5524ADC4BE00487C34 /* NSAttributedStringExtension.swift in Sources */,
 				6E0BF1FB22B0954F00B71D49 /* CompatibleSafeAreaLayoutGuide.swift in Sources */,
 				6EE4E77428F4319A00B9F838 /* NibExtensions.swift in Sources */,
 				6EE5CFD1226F3C4300CE643F /* UITextFieldLimiter.swift in Sources */,
-				6E59B97422A8BFB200415BAA /* UILabelExtension.swift in Sources */,
 				6EC0A04D2272F729003DC6B6 /* UIScreenExtension.swift in Sources */,
 				6E5B8B5024ADA95A00487C34 /* UIKitExtensions.swift in Sources */,
 				6EE5CFCB226F2A9300CE643F /* UITextFieldExtension.swift in Sources */,
 				6EE5CFC9226F286500CE643F /* UICollectionViewExtension.swift in Sources */,
 				6E5B8B5324ADC48D00487C34 /* NSMutableAttributedStringExtension.swift in Sources */,
 				6EE387CE228516AF00379157 /* UIViewExtension.swift in Sources */,
+				6E8EFDDB29B5CC1600117F4D /* LayoutSizeCalculator.swift in Sources */,
 				6EBB711C2808358E0007BB2B /* DPLogCoordinator.swift in Sources */,
 				6EE5CFCF226F2F8E00CE643F /* UIImageExtension.swift in Sources */,
 				6EE5CFBE226F280200CE643F /* UITableViewExtension.swift in Sources */,
+				6E8EFDE129B5CE1600117F4D /* NSAttributedString+LayoutSize.swift in Sources */,
+				6E8EFDDF29B5CE0200117F4D /* String+LayoutSize.swift in Sources */,
 				6EDF865022E078BC00927FCF /* UITextViewLimiter.swift in Sources */,
+				6E8EFDD929B5CBC900117F4D /* StringLayoutSizeCalculator.swift in Sources */,
 				6EC0A0462272A13E003DC6B6 /* UIDeviceExtension.swift in Sources */,
 				6E008CDB226D64A100EA70FE /* UIViewControllerExtension.swift in Sources */,
+				6E8EFDEA29B5E05F00117F4D /* NSAttributedString+PrettyString.swift in Sources */,
 				6E7333CC22AF897500034910 /* UISearchBarExtension.swift in Sources */,
 				6EAF1ECE22730ADD0011A84D /* UIApplicationExtension.swift in Sources */,
 				6E0BF1FD22B095B500B71D49 /* PlaceholderLayoutGuide.swift in Sources */,
+				6E8EFDE829B5D90900117F4D /* PrettyString.swift in Sources */,
 				6E26796A2271425E00706F46 /* ExtendedViewController.swift in Sources */,
 				6EE5CFCD226F2B9B00CE643F /* UIFontExtension.swift in Sources */,
 				6E008CDA226D64A100EA70FE /* UIColorExtension.swift in Sources */,
 				6E3B7A6922B09B1700B5DE4F /* UINavigationBarExtension.swift in Sources */,
 				6EE4E77228F42FDF00B9F838 /* BundleExtensions.swift in Sources */,
+				6E8EFDEC29B5E09000117F4D /* String+PrettyString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,6 +1025,7 @@
 			files = (
 				6E75339D24B5C3BD00FB9DF4 /* ViewController.m in Sources */,
 				6E75339724B5C3BD00FB9DF4 /* AppDelegate.m in Sources */,
+				6E8EFDD629B5C72B00117F4D /* DPLogCoordinator.swift in Sources */,
 				6E7533A824B5C3BF00FB9DF4 /* main.m in Sources */,
 				6E75339A24B5C3BD00FB9DF4 /* SceneDelegate.m in Sources */,
 			);
@@ -1273,6 +1336,7 @@
 			baseConfigurationReference = FC344DF42BEC3426036D24F1 /* Pods-UIKitExtensionsExample-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TH5FC22B7;
 				INFOPLIST_FILE = "UIKitExtensionsExample-ObjC/Info.plist";
@@ -1283,6 +1347,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "DP.iOS.Component.UIKitExtensionsExample-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIKitExtensionsExample-ObjC/UIKitExtensionsExample-ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1292,6 +1359,7 @@
 			baseConfigurationReference = D74741FCE54A7B01DB75D633 /* Pods-UIKitExtensionsExample-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TH5FC22B7;
 				INFOPLIST_FILE = "UIKitExtensionsExample-ObjC/Info.plist";
@@ -1302,6 +1370,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "DP.iOS.Component.UIKitExtensionsExample-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIKitExtensionsExample-ObjC/UIKitExtensionsExample-ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

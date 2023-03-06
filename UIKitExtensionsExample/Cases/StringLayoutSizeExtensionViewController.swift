@@ -52,9 +52,9 @@ class StringLayoutSizeExtensionViewController: UIViewController {
         let text = "这是一个文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本 文本"
         let textFont = UIFont.systemFont(ofSize: 30)
 
-        let fixedSize = text.layoutSizeThatFits(CGSize(width: view.bounds.width-40,
-                                                            height: CGFloat.greatestFiniteMagnitude),
-                                                     font: textFont)
+        let fixedSize = text.layoutSizeThatFits(size: CGSize(width: view.bounds.width-40,
+                                                             height: CGFloat.greatestFiniteMagnitude),
+                                                font: textFont)
         Log.debug(fixedSize)
 
         let stringLayoutSizeLabel = UILabel(frame: CGRect(x: 20, y: 100, width: fixedSize.width, height: fixedSize.height))

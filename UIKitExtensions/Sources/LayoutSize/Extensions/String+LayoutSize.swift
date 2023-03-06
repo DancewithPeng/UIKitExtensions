@@ -19,7 +19,7 @@ public extension String {
     ///   - font: 字体
     ///   - lines: 文本行数
     /// - Returns: 返回`String`在UILabel布局中所占的尺寸
-    func layoutSizeThatFits(_ maxSize: CGSize, font: UIFont? = nil, lines: Int = 0) -> CGSize {
+    func layoutSizeThatFits(size maxSize: CGSize, font: UIFont? = nil, lines: Int = 0) -> CGSize {
         return StringLayoutSizeCalculator(
             content: self,
             font: font
@@ -37,7 +37,7 @@ public extension String {
     ///   - lines: 文本行数
     /// - Returns: 返回`string`在UILabel布局中所占的高度
     func layoutHeightThatFits(width maxWidth: CGFloat, font: UIFont, lines: Int = 0) -> CGFloat {
-        return layoutSizeThatFits(CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
+        return layoutSizeThatFits(size: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
                                   font: font,
                                   lines: lines).height
     }
@@ -50,7 +50,7 @@ public extension String {
     ///   - lines: 文本行数
     /// - Returns: 返回`string`在UILabel布局中所占的宽度
     func layoutWidthThatFits(height maxHeight: CGFloat, font: UIFont, lines: Int = 0) -> CGFloat {
-        return layoutSizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: maxHeight),
+        return layoutSizeThatFits(size: CGSize(width: CGFloat.greatestFiniteMagnitude, height: maxHeight),
                                   font: font,
                                   lines: lines).width
     }
@@ -68,8 +68,8 @@ public extension NSString {
     ///   - font: 字体
     ///   - lines: 文本行数
     /// - Returns: 返回`String`在UILabel布局中所占的尺寸
-    func ___objc_layoutSizeThatFits(_ maxSize: CGSize, font: UIFont? = nil, lines: Int) -> CGSize {
-        return (self as String).layoutSizeThatFits(maxSize,
+    func ___objc_layoutSizeThatFits(size maxSize: CGSize, font: UIFont? = nil, lines: Int) -> CGSize {
+        return (self as String).layoutSizeThatFits(size: maxSize,
                                                    font: font,
                                                    lines: lines)
     }
@@ -81,9 +81,10 @@ public extension NSString {
     ///   - maxSize: 最大尺寸
     ///   - font: 字体
     /// - Returns: 返回`String`在UILabel布局中所占的尺寸
-    func ___objc_layoutSizeThatFits(_ maxSize: CGSize, font: UIFont? = nil) -> CGSize {
-        return ___objc_layoutSizeThatFits(maxSize, font:
-                                            font, lines: 0)
+    func ___objc_layoutSizeThatFits(size maxSize: CGSize, font: UIFont? = nil) -> CGSize {
+        return ___objc_layoutSizeThatFits(size: maxSize,
+                                          font: font,
+                                          lines: 0)
     }
     
     @objc(layoutHeightThatFitsWidth:font:lines:)
@@ -95,7 +96,7 @@ public extension NSString {
     ///   - lines: 文本行数
     /// - Returns: 返回`string`在UILabel布局中所占的高度
     func ___objc_layoutHeightThatFits(width maxWidth: CGFloat, font: UIFont, lines: Int) -> CGFloat {
-        return ___objc_layoutSizeThatFits(CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
+        return ___objc_layoutSizeThatFits(size: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
                                           font: font,
                                           lines: lines).height
     }
@@ -108,7 +109,7 @@ public extension NSString {
     ///   - font: 字体
     /// - Returns: 返回`string`在UILabel布局中所占的高度
     func ___objc_layoutHeightThatFits(width maxWidth: CGFloat, font: UIFont) -> CGFloat {
-        return ___objc_layoutSizeThatFits(CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
+        return ___objc_layoutSizeThatFits(size: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
                                           font: font,
                                           lines: 0).height
     }
@@ -122,7 +123,7 @@ public extension NSString {
     ///   - lines: 文本行数
     /// - Returns: 返回`string`在UILabel布局中所占的宽度
     func ___objc_layoutWidthThatFits(height maxHeight: CGFloat, font: UIFont, lines: Int = 0) -> CGFloat {
-        return ___objc_layoutSizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: maxHeight),
+        return ___objc_layoutSizeThatFits(size: CGSize(width: CGFloat.greatestFiniteMagnitude, height: maxHeight),
                                           font: font,
                                           lines: lines).width
     }
@@ -135,7 +136,7 @@ public extension NSString {
     ///   - font: 字体
     /// - Returns: 返回`string`在UILabel布局中所占的宽度
     func ___objc_layoutWidthThatFits(height maxHeight: CGFloat, font: UIFont) -> CGFloat {
-        return ___objc_layoutSizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: maxHeight),
+        return ___objc_layoutSizeThatFits(size: CGSize(width: CGFloat.greatestFiniteMagnitude, height: maxHeight),
                                           font: font,
                                           lines: 0).width
     }

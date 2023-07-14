@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6U-Y6-IdH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6U-Y6-IdH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -451,7 +451,7 @@
                                         <rect key="frame" x="0.0" y="833" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y3c-bF-Q8Z" id="Tfa-MX-zNy">
-                                            <rect key="frame" x="0.0" y="0.0" width="383.5" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="395.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSAttributedString" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phs-ez-in6">
@@ -758,14 +758,42 @@
                     <view key="view" contentMode="scaleToFill" id="ziG-OP-VC8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-lV-Ac3">
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="804" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ekJ-jm-9Ym">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sgI-00-EME" firstAttribute="trailing" secondItem="ekJ-jm-9Ym" secondAttribute="trailing" id="9fK-Ma-KNC"/>
+                                    <constraint firstItem="ekJ-jm-9Ym" firstAttribute="leading" secondItem="sgI-00-EME" secondAttribute="leading" id="K87-fe-snz"/>
+                                    <constraint firstItem="sgI-00-EME" firstAttribute="bottom" secondItem="ekJ-jm-9Ym" secondAttribute="bottom" id="edb-I1-ndQ"/>
+                                    <constraint firstItem="ekJ-jm-9Ym" firstAttribute="top" secondItem="sgI-00-EME" secondAttribute="top" id="s1d-hf-Rbs"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sgI-00-EME"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="AzC-lW-rT0"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Tqc-8u-4nt"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ekJ-jm-9Ym" firstAttribute="width" secondItem="ziG-OP-VC8" secondAttribute="width" id="17z-fj-OMK"/>
+                            <constraint firstAttribute="bottom" secondItem="rKe-lV-Ac3" secondAttribute="bottom" id="5d7-lM-3cb"/>
+                            <constraint firstItem="rKe-lV-Ac3" firstAttribute="top" secondItem="Tqc-8u-4nt" secondAttribute="top" id="Bbs-eI-WRK"/>
+                            <constraint firstItem="rKe-lV-Ac3" firstAttribute="trailing" secondItem="Tqc-8u-4nt" secondAttribute="trailing" id="Wdv-PR-6XK"/>
+                            <constraint firstItem="rKe-lV-Ac3" firstAttribute="leading" secondItem="Tqc-8u-4nt" secondAttribute="leading" id="cGp-8f-CQx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="StringLayoutSizeExtension" id="uXm-1g-EUk"/>
+                    <connections>
+                        <outlet property="elementContainerView" destination="ekJ-jm-9Ym" id="TwL-QM-7gH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAb-GI-nCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5172" y="-121"/>
+            <point key="canvasLocation" x="5171.0144927536239" y="-121.20535714285714"/>
         </scene>
         <!--UITextViewExtension-->
         <scene sceneID="2Yz-hG-yOd">
